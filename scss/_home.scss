@@ -1,6 +1,5 @@
 .s-hero {
   padding: 8.3rem 0 11.2rem;
-  // display: none;
   .container {
     @include flex(colunm, flex-start, space-between);
     .left {
@@ -32,12 +31,48 @@
       }
     }
   }
+  @include responsive(991px) {
+    padding: 5.4rem 0 11.2rem;
+    .container {
+      flex-direction: column;
+      .left {
+        text-align: center;
+        margin: 0 auto;
+        .btns {
+          justify-content: center;
+          .btn-github,
+          .btn-linkedin {
+            max-width: 100%;
+            padding: 8px 24px;
+          }
+        }
+      }
+      .right {
+        margin: 3.2rem auto;
+      }
+    }
+  }
+  @include responsive(540px) {
+    .container {
+      .left {
+        max-width: 43.7rem;
+        h5 {
+          font-size: 1.6rem;
+        }
+        h1 {
+          font-size: 4.6rem;
+        }
+        p {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
 }
 
 .marquee {
   padding: 2.4rem 0;
   background-color: $blue-light;
-  display: none;
   marquee {
     .container {
       @include flex-center;
@@ -65,7 +100,6 @@
 
 .s-cases {
   padding: 11.2rem 0;
-  display: none;
   .container {
     padding-bottom: 2.8rem;
     .top {
@@ -141,10 +175,26 @@
       }
     }
   }
+  @include responsive(991px) {
+    padding: 8.6rem 0;
+    .container {
+      .top {
+        flex-direction: column;
+        justify-content: center;
+        gap: 2.4rem;
+      }
+      .slide-case {
+        flex-direction: column;
+        gap: 3.2rem;
+        img {
+          max-width: 90%s;
+        }
+      }
+    }
+  }
 }
 
 .s-sobre {
-  display: none;
   padding: 11.2rem 0;
   .container {
     @include flexSpaceBetween;
@@ -174,6 +224,26 @@
         .next,
         .react {
           grid-row: 3;
+        }
+      }
+    }
+  }
+  @include responsive(991px) {
+    padding: 0 0 11.2rem;
+    .container {
+      flex-direction: column;
+      text-align: center;
+      .left {
+        margin-bottom: 4rem;
+        .btn-cv {
+          margin: 0 auto;
+        }
+      }
+      .right {
+        .icons {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
         }
       }
     }
