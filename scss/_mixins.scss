@@ -1,0 +1,27 @@
+@mixin flex($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin responsive($screenWidth) {
+  @media (max-width: $screenWidth) {
+    @content;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexSpaceBetween {
+  @include flex-center;
+  justify-content: space-between;
+}
+
+@mixin flexTotalCenter {
+  @include flex-center;
+  justify-content: center;
+}

@@ -1,0 +1,51 @@
+footer {
+  padding: 11.2rem 0 0.8rem;
+  background-color: $blue-dark;
+  .container {
+    @include flexSpaceBetween;
+    .left {
+      h2 {
+        color: $gray-100;
+        margin-bottom: 2.4rem;
+      }
+      a {
+        color: $gray-100;
+        font-size: 2.2rem;
+        line-height: 120%;
+        text-decoration-line: underline;
+      }
+    }
+    .right {
+      nav {
+        ul {
+          @include flex-center;
+          gap: 3.2rem;
+          li {
+            a {
+              color: $gray-100;
+              font-size: 1.8rem;
+              line-height: 155%;
+            }
+          }
+        }
+      }
+      .socials {
+        @include flex(row, flex-end, flex-end);
+        gap: 5.6rem;
+        margin-top: 11.2rem;
+      }
+    }
+  }
+  p {
+    color: $gray-100;
+    font-size: 1.4rem;
+    line-height: 155%;
+    opacity: 0.8;
+    text-align: center;
+    margin-top: 5.8rem;
+    a {
+      text-decoration-line: underline;
+      color: $gray-100;
+    }
+  }
+}
