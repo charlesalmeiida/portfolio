@@ -1,6 +1,7 @@
 footer {
   padding: 11.2rem 0 0.8rem;
   background-color: $blue-dark;
+  display: none;
   .container {
     @include flexSpaceBetween;
     .left {

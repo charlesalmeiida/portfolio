@@ -5,6 +5,7 @@ header {
   .container {
     @include flexSpaceBetween;
     nav {
+      transition: all 0.3s ease;
       gap: 4.8rem;
       @include flexSpaceBetween;
       ul {
@@ -32,6 +33,50 @@ header {
           line-height: 150%;
           &.active {
             color: $gray-600;
+          }
+        }
+      }
+    }
+    .btn-mobile {
+      display: none;
+    }
+  }
+  @include responsive(791px) {
+    .container {
+      .btn-mobile {
+        display: block;
+      }
+      nav {
+        display: none;
+        position: relative;
+        &.active {
+          @include flex(column, center, center);
+          position: absolute;
+          left: 0;
+          background-color: $blue-light;
+          width: 100%;
+          z-index: 100;
+          padding: 3.2rem;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          top: 7.5rem;
+          ul {
+            flex-direction: column;
+            li {
+              a {
+                color: $gray-100;
+              }
+            }
+          }
+          .divisor {
+            display: none;
+          }
+          .language {
+            a {
+              color: $gray-400;
+              &.active {
+                color: $gray-100;
+              }
+            }
           }
         }
       }

@@ -1,5 +1,6 @@
 .s-hero {
   padding: 8.3rem 0 11.2rem;
+  // display: none;
   .container {
     @include flex(colunm, flex-start, space-between);
     .left {
@@ -36,6 +37,7 @@
 .marquee {
   padding: 2.4rem 0;
   background-color: $blue-light;
+  display: none;
   marquee {
     .container {
       @include flex-center;
@@ -63,6 +65,7 @@
 
 .s-cases {
   padding: 11.2rem 0;
+  display: none;
   .container {
     padding-bottom: 2.8rem;
     .top {
@@ -141,6 +144,7 @@
 }
 
 .s-sobre {
+  display: none;
   padding: 11.2rem 0;
   .container {
     @include flexSpaceBetween;
