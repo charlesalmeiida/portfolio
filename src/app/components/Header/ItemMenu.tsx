@@ -8,7 +8,10 @@ interface ItemMenuProps {
 
 export function ItemMenu({ children, link }: ItemMenuProps) {
   return (
-    <Link className="font-normal" href={link}>
+    <Link
+      className="font-normal text-gray03 transition-all hover:text-gray02 "
+      href={link}
+    >
       {children}
     </Link>
   )
