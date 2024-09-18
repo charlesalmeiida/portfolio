@@ -17,8 +17,10 @@ const config: Config = {
       },
       colors: {
         blue: "#1F4287",
+        blue02: "#071E3D",
         gray03: "#212529",
         gray02: "#ADB5BD",
+        gray01: "#F8F9FA",
       },
     },
   },
