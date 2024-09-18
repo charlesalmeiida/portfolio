@@ -8,6 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        scroll: "scroll 15s linear infinite",
+      },
+      keyframes: {
+        scroll: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+      },
       fontFamily: {
         poppins: ["var(--font-poppins)"],
         inter: ["var(--font-inter)"],
@@ -18,6 +27,7 @@ const config: Config = {
       colors: {
         blue: "#1F4287",
         blue02: "#071E3D",
+        blue03: "#2C4D8E",
         gray03: "#212529",
         gray02: "#ADB5BD",
         gray01: "#F8F9FA",
