@@ -6,7 +6,7 @@ import { LinkLang } from "./LinkLang"
 
 export function Header() {
   return (
-    <header className="drop-shadow-lg bg-white sticky top-0">
+    <header className="drop-shadow-lg bg-white sticky top-0 z-10">
       <Container className="flex justify-between py-8">
         <div>
           <Link href="#">
