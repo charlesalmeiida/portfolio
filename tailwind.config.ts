@@ -22,7 +22,7 @@ const config: Config = {
         inter: ["var(--font-inter)"],
       },
       dropShadow: {
-        lg: "0px 9px 129.8px rgba(0, 0, 0, 0.10)",
+        lg: "0px 9px 140px rgba(0, 0, 0, 0.10)",
       },
       colors: {
         blue: "#1F4287",

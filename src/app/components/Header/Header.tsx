@@ -14,9 +14,15 @@ export function Header() {
           </Link>
         </div>
         <nav className="font-inter flex gap-12">
-          <ItemMenu link="#cases">Cases</ItemMenu>
-          <ItemMenu link="#cases">Quem sou</ItemMenu>
-          <ItemMenu link="#contato">Contato</ItemMenu>
+          <ItemMenu className="text-gray03 hover:text-gray02" link="#cases">
+            Cases
+          </ItemMenu>
+          <ItemMenu className="text-gray03 hover:text-gray02" link="#cases">
+            Quem sou
+          </ItemMenu>
+          <ItemMenu className="text-gray03 hover:text-gray02" link="#contato">
+            Contato
+          </ItemMenu>
           <span>|</span>
           <div className="flex items-center gap-2">
             <LinkLang link="/">

@@ -1,15 +1,17 @@
 import Link from "next/link"
 import { ReactNode } from "react"
+import { twMerge } from "tailwind-merge"
 
 interface ItemMenuProps {
   children: ReactNode
   link: string
+  className: string
 }
 
-export function ItemMenu({ children, link }: ItemMenuProps) {
+export function ItemMenu({ children, link, className }: ItemMenuProps) {
   return (
     <Link
-      className="font-normal text-gray03 transition-all hover:text-gray02 "
+      className={(twMerge("font-normal transition-all"), className)}
       href={link}
     >
       {children}
