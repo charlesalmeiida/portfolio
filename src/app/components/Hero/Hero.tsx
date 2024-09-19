@@ -12,8 +12,13 @@ function MyComponent() {
   useEffect(() => {
     if (el.current) {
       const typed = new Typed(el.current, {
-        strings: ["Desenvolvedor Front-end"],
-        typeSpeed: 60,
+        strings: [
+          "Desenvolvedor Front-end",
+          "Desenvolvedor React",
+          "Desenvolvedor Next.js",
+        ],
+        typeSpeed: 70,
+        loop: true,
       })
 
       return () => {
@@ -22,9 +27,7 @@ function MyComponent() {
     }
   }, [])
 
-  return (
-    <span ref={el} />
-  )
+  return <span ref={el} />
 }
 
 export function Hero() {
