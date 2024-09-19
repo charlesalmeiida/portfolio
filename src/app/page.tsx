@@ -1,3 +1,4 @@
+import { About } from "./components/About/About"
 import { Cases } from "./components/Cases/Cases"
 import { DivisorArea } from "./components/DivisorAnimated/DivisorArea"
 import { Header } from "./components/Header/Header"
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <DivisorArea />
       <Cases />
+      <About />
     </>
   )
 }
