@@ -5,26 +5,52 @@ import { Container } from "../GridContainer"
 import { ProjectCase } from "./ProjectCase"
 import { CasesModal } from "./CasesModal"
 
+// Define a type for the project object
+interface Project {
+  imageSrc: string
+  imageAlt: string
+  projectName: string
+  projectDescription: string
+  tech1: string
+  techName1: string
+  tech2: string
+  techName2: string
+  tech3: string
+  techName3: string
+  liveLink: string
+  repoLink: string
+}
+
 export function Cases() {
   const [showAll, setShowAll] = useState(false)
   const [isModalOpen, setModalOpen] = useState(false)
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
-  const openModal = () => setModalOpen(true)
-  const closeModal = () => setModalOpen(false)
+  const openModal = (project: Project) => {
+    setSelectedProject(project)
+    setModalOpen(true)
+  }
 
-  const projects = [
+  const closeModal = () => {
+    setModalOpen(false)
+    setSelectedProject(null)
+  }
+
+  const projects: Project[] = [
     {
       imageSrc: "/project-image-portfolio.png",
       imageAlt: "Imagem do projeto Portfolio",
       projectName: "Portfolio",
       projectDescription:
-        "Meu próprio portfólio, desenvolvido em Next.js com Tailwind para auxiliar na estilização.",
+        "Portfólio pessoal utilizando Next.js para garantir alto desempenho e otimização SEO, Para a estilização, utilizei Tailwind CSS, que me permitiu criar uma interface responsiva e atraente.",
       tech1: "next",
       techName1: "Next.js",
       tech2: "tailwind",
       techName2: "Tailwind",
       tech3: "ts",
       techName3: "TypeScript",
+      liveLink: "https://portfolio-opal-three-21.vercel.app",
+      repoLink: "https://github.com/charlesalmeiida/portfolio",
     },
     {
       imageSrc: "/image-project-consultacep.png",
@@ -38,6 +64,8 @@ export function Cases() {
       techName2: "Tailwind",
       tech3: "js",
       techName3: "JavaScript",
+      liveLink: "https://consultacep-charlesalmeiida.netlify.app",
+      repoLink: "https://github.com/charlesalmeiida/consultaCEP",
     },
     {
       imageSrc: "/image-project-quiz.png",
@@ -51,6 +79,8 @@ export function Cases() {
       techName2: "Vite",
       tech3: "ts",
       techName3: "TypeScript",
+      liveLink: "https://quizapp-dsl.netlify.app",
+      repoLink: "https://github.com/charlesalmeiida/quiz-app",
     },
     {
       imageSrc: "/image-project-devbooks.png",
@@ -64,6 +94,8 @@ export function Cases() {
       techName2: "TypeScript",
       tech3: "styled",
       techName3: "Styled-components",
+      liveLink: "https://devbooks-dsl.netlify.app",
+      repoLink: "https://github.com/charlesalmeiida/devbooks",
     },
   ]
 
@@ -85,7 +117,7 @@ export function Cases() {
           id="cases"
         >
           {visibleProjects.map((project, index) => (
-            <button key={index} onClick={openModal}>
+            <button key={index} onClick={() => openModal(project)}>
               <ProjectCase
                 imageSrc={project.imageSrc}
                 imageAlt={project.imageAlt}
@@ -100,7 +132,16 @@ export function Cases() {
               />
             </button>
           ))}
-          {isModalOpen && <CasesModal closeModal={closeModal} />}
+          {isModalOpen && selectedProject && (
+            <CasesModal
+              closeModal={closeModal}
+              liveLink={selectedProject.liveLink}
+              repoLink={selectedProject.repoLink}
+              projectName={selectedProject.projectName}
+              projectDescription={selectedProject.projectDescription}
+              projectImage={selectedProject.projectName}
+            />
+          )}
         </div>
         <button
           onClick={() => setShowAll(!showAll)}

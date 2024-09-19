@@ -28,7 +28,7 @@ export function ProjectCase({
   techName3,
 }: ProjectCaseProps) {
   return (
-    <div className="w-fit pb-6 text-left border-[1px] rounded-md border-[#DCDCDC] cursor-pointer transition-all hover:scale-105">
+    <div className="w-fit h-[485px] text-left border-[1px] rounded-md border-[#DCDCDC] cursor-pointer transition-all hover:scale-105">
       <Image src={imageSrc} width={383} height={229} alt={imageAlt} />
       <div className="pt-4 pl-4 flex gap-2">
         <TagTech>
@@ -67,7 +67,7 @@ export function ProjectCase({
           {projectDescription}
         </p>
         <Link
-          className="font-inter text-base font-medium text-blue03 underline block mt-6"
+          className="font-inter text-base font-medium text-blue03 underline block mt-3"
           href="/"
         >
           Saiba mais
