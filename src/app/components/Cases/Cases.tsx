@@ -9,6 +9,7 @@ interface Project {
   imageSrc: string
   imageAlt: string
   projectName: string
+  projectImage: string
   projectDescription: string
   tech1: string
   techName1: string
@@ -68,6 +69,7 @@ export function Cases() {
       techName3: "TypeScript",
       liveLink: "https://portfolio-opal-three-21.vercel.app",
       repoLink: "https://github.com/charlesalmeiida/portfolio",
+      projectImage: "portfolio",
     },
     {
       imageSrc: "/image-project-consultacep.png",
@@ -83,6 +85,7 @@ export function Cases() {
       techName3: "JavaScript",
       liveLink: "https://consultacep-charlesalmeiida.netlify.app",
       repoLink: "https://github.com/charlesalmeiida/consultaCEP",
+      projectImage: "consultacep",
     },
     {
       imageSrc: "/image-project-quiz.png",
@@ -98,6 +101,7 @@ export function Cases() {
       techName3: "TypeScript",
       liveLink: "https://quizapp-dsl.netlify.app",
       repoLink: "https://github.com/charlesalmeiida/quiz-app",
+      projectImage: "quiz app",
     },
     {
       imageSrc: "/image-project-devbooks.png",
@@ -113,6 +117,7 @@ export function Cases() {
       techName3: "Styled-components",
       liveLink: "https://devbooks-dsl.netlify.app",
       repoLink: "https://github.com/charlesalmeiida/devbooks",
+      projectImage: "devbooks",
     },
   ]
 
@@ -153,7 +158,7 @@ export function Cases() {
               repoLink={selectedProject.repoLink}
               projectName={selectedProject.projectName}
               projectDescription={selectedProject.projectDescription}
-              projectImage={selectedProject.projectName}
+              projectImage={selectedProject.projectImage}
             />
           )}
         </div>
