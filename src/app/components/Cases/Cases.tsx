@@ -1,11 +1,10 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Container } from "../GridContainer"
 import { ProjectCase } from "./ProjectCase"
 import { CasesModal } from "./CasesModal"
 
-// Define a type for the project object
 interface Project {
   imageSrc: string
   imageAlt: string
@@ -25,6 +24,24 @@ export function Cases() {
   const [showAll, setShowAll] = useState(false)
   const [isModalOpen, setModalOpen] = useState(false)
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
+
+  function disableScroll() {
+    document.body.style.overflow = "hidden"
+  }
+
+  function enableScroll() {
+    document.body.style.overflow = ""
+  }
+
+  useEffect(() => {
+    if (isModalOpen) {
+      disableScroll()
+    } else {
+      enableScroll()
+    }
+
+    return () => enableScroll()
+  }, [isModalOpen])
 
   const openModal = (project: Project) => {
     setSelectedProject(project)
@@ -103,7 +120,7 @@ export function Cases() {
 
   return (
     <Container>
-      <div className="py-28">
+      <div className="py-14 md:py-28" id="cases">
         <div className="mx-auto w-fit text-center space-y-2">
           <span className="font-poppins text-base text-gray03 tracking-widest">
             PROJETOS
@@ -112,10 +129,7 @@ export function Cases() {
             Meus cases
           </h2>
         </div>
-        <div
-          className="mt-14 flex justify-between flex-wrap max-w-[1216px] gap-y-8"
-          id="cases"
-        >
+        <div className="mt-14 flex justify-center md:justify-between gap-8 md:gap-y-8 md:gap-x-0 flex-wrap max-w-[1216px] ">
           {visibleProjects.map((project, index) => (
             <button key={index} onClick={() => openModal(project)}>
               <ProjectCase
@@ -145,7 +159,7 @@ export function Cases() {
         </div>
         <button
           onClick={() => setShowAll(!showAll)}
-          className="rounded-[4px] font-inter py-2 px-4 flex items-center gap-4 w-fit transition-all hover:scale-110 bg-transparent mx-auto mt-20 text-gray03 border-[1px] border-blue02"
+          className="rounded-[4px] font-inter py-2 px-4 flex items-center gap-4 w-fit transition-all hover:scale-110 bg-transparent mx-auto mt-14 md:mt-20 text-gray03 border-[1px] border-blue02"
         >
           {showAll ? "Mostrar menos" : "Mostrar mais"}
         </button>

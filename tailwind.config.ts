@@ -32,6 +32,11 @@ const config: Config = {
         gray02: "#ADB5BD",
         gray01: "#F8F9FA",
       },
+      screens: {
+        sm: "640px",
+        md: "1024px",
+        lg: "1280px",
+      },
     },
   },
   plugins: [],

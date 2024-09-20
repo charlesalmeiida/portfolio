@@ -5,9 +5,9 @@ import Image from "next/image"
 
 export function Footer() {
   return (
-    <footer className="pt-20 pb-4 bg-blue02">
+    <footer className="pt-14 md:pt-20 pb-4 bg-blue02" id="contato">
       <Container>
-        <div className="flex justify-between">
+        <div className="flex-col flex items-center md:text-left text-center gap-6 md:flex-row justify-between">
           <div>
             <h2 className="font-poppins text-3xl font-semibold text-gray01">
               Entre em contato:
@@ -37,7 +37,7 @@ export function Footer() {
                 Contato
               </ItemMenu>
             </nav>
-            <div className="flex gap-14">
+            <div className="flex gap-14 mx-auto md:mx-0">
               <Link
                 href="https://linkedin.com/in/charlesalmeiida"
                 target="_blank"

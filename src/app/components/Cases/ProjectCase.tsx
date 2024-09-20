@@ -1,6 +1,5 @@
 import Image from "next/image"
 import { TagTech } from "./TagTechProject"
-import Link from "next/link"
 
 interface ProjectCaseProps {
   projectName: string
@@ -66,12 +65,9 @@ export function ProjectCase({
         <p className="font-inter text-sm mt-3 text-gray03 opacity-80 max-w-[333px]">
           {projectDescription}
         </p>
-        <Link
-          className="font-inter text-base font-medium text-blue03 underline block mt-3"
-          href="/"
-        >
+        <span className="font-inter text-base font-medium text-blue03 underline block mt-3">
           Saiba mais
-        </Link>
+        </span>
       </div>
     </div>
   )

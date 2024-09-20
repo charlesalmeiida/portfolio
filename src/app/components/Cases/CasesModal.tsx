@@ -19,9 +19,21 @@ export function CasesModal({
   projectDescription,
   projectImage,
 }: CasesModalProps) {
+  const handleOverlayClick = (
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
+    if (e.target === e.currentTarget) {
+      closeModal()
+    }
+  }
+
   return (
     <Container>
-      <div className="fixed pt-10 drop-shadow-2xl inset-0 h-fit mx-auto top-40 z-20 bg-white border-[1px] rounded-md border-[#DCDCDC] w-fit">
+      <div
+        className="fixed inset-0 bg-black bg-opacity-50 z-10"
+        onClick={handleOverlayClick}
+      ></div>
+      <div className="fixed mx-2 pt-10 drop-shadow-2xl inset-0 h-fit md:mx-auto top-40 z-20 bg-white border-[1px] rounded-md border-[#DCDCDC] w-fit">
         <button
           onClick={closeModal}
           className="absolute top-4 right-4 font-inter text-sm bg-blue text-gray01 px-2 rounded-full"

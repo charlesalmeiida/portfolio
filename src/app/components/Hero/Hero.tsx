@@ -33,7 +33,7 @@ function MyComponent() {
 export function Hero() {
   return (
     <Container>
-      <div className="pt-20 pb-20 flex items-center justify-between">
+      <div className="py-14 md:py-20 flex flex-col md:flex-row items-center justify-between">
         <div>
           <div className="space-y-6">
             <h5 className="text-gray03 text-base font-poppins tracking-wider">
@@ -41,11 +41,11 @@ export function Hero() {
               <strong className="font-semibold">Charles Almeida</strong>
               👋🏻
             </h5>
-            <h1 className="text-6xl leading-tight font-poppins font-semibold max-w-md">
+            <h1 className="text-5xl md:text-6xl leading-tight font-poppins font-semibold max-w-md">
               <MyComponent />
             </h1>
           </div>
-          <p className="font-inter text-lg leading-normal mt-4 text-gray03 opacity-70 max-w-[520px]">
+          <p className="font-inter text-base md:text-lg leading-normal mt-4 text-gray03 opacity-70 max-w-[520px]">
             Com formação em Sistemas de Informação e conhecimentos em UX e UI
             Design. Conhecimentos esses que combinados me permitem criar
             experiências digitais que são tanto esteticamente agradáveis quanto
@@ -78,7 +78,7 @@ export function Hero() {
             </Button>
           </div>
         </div>
-        <div>
+        <div className="mt-10 md:mt-0">
           <Image
             src="/hero-image.svg"
             width={593}

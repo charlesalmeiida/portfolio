@@ -6,12 +6,12 @@ import { TagTechAbout } from "./TagTechAbout"
 export function About() {
   return (
     <Container>
-      <div className="pb-20 flex justify-between">
+      <div className="pb-20 flex flex-col items-center gap-8 md:gap-0 md:flex-row justify-between" id="quem-sou">
         <div>
           <span className="text-gray03 font-inter text-lg font-semibold">
             Olá, prazer 👋🏻
           </span>
-          <h2 className="font-poppins text-[40px] font-semibold mt-4 text-gray03">
+          <h2 className="font-poppins text-4xl md:text-[40px] font-semibold mt-4 text-gray03">
             Charles Almeida
           </h2>
           <h3 className="font-poppins text-lg font-semibold text-gray03">
