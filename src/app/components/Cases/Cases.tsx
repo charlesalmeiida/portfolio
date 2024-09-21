@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import { Container } from "../GridContainer"
 import { ProjectCase } from "./ProjectCase"
 import { CasesModal } from "./CasesModal"
+import { motion } from "framer-motion"
 
 interface Project {
   imageSrc: string
@@ -134,7 +135,13 @@ export function Cases() {
             Meus cases
           </h2>
         </div>
-        <div className="mt-14 flex justify-center md:justify-between gap-8 md:gap-y-8 md:gap-x-0 flex-wrap max-w-[1216px] ">
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 100 }}
+          transition={{ duration: 0.6 }}
+          className="mt-14 flex justify-center md:justify-between gap-8 md:gap-y-8 md:gap-x-0 flex-wrap max-w-[1216px] "
+        >
           {visibleProjects.map((project, index) => (
             <button key={index} onClick={() => openModal(project)}>
               <ProjectCase
@@ -161,7 +168,7 @@ export function Cases() {
               projectImage={selectedProject.projectImage}
             />
           )}
-        </div>
+        </motion.div>
         <button
           onClick={() => setShowAll(!showAll)}
           className="rounded-[4px] font-inter py-2 px-4 flex items-center gap-4 w-fit transition-all hover:scale-110 bg-transparent mx-auto mt-14 md:mt-20 text-gray03 border-[1px] border-blue02"

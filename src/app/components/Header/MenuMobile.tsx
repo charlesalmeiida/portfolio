@@ -1,10 +1,15 @@
 import Image from "next/image"
 import { ItemMenu } from "./ItemMenu"
 import { LinkLang } from "./LinkLang"
+import { motion } from "framer-motion"
 
 export function MenuMobile() {
   return (
-    <div className="flex flex-col gap-10 absolute inset-0 top-20 text-center w-full h-fit py-8 bg-blue">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="flex flex-col gap-10 absolute inset-0 top-20 text-center w-full h-fit py-8 bg-blue"
+    >
       <ItemMenu className="text-gray01 hover:text-gray02" link="#cases">
         Cases
       </ItemMenu>
@@ -38,6 +43,6 @@ export function MenuMobile() {
           EN
         </LinkLang>
       </div>
-    </div>
+    </motion.div>
   )
 }

@@ -5,6 +5,7 @@ import { Container } from "../GridContainer"
 import { Button } from "../Button/Button"
 import Typed from "typed.js"
 import { useEffect, useRef } from "react"
+import { motion } from "framer-motion"
 
 function MyComponent() {
   const el = useRef<HTMLSpanElement | null>(null)
@@ -34,7 +35,12 @@ export function Hero() {
   return (
     <Container>
       <div className="py-14 md:py-20 flex flex-col md:flex-row items-center justify-between">
-        <div>
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -100 }}
+          transition={{ duration: 0.6 }}
+        >
           <div className="space-y-6">
             <h5 className="text-gray03 text-base font-poppins tracking-wider">
               Olá, eu sou{" "}
@@ -77,15 +83,21 @@ export function Hero() {
               LinkedIn
             </Button>
           </div>
-        </div>
-        <div className="mt-10 md:mt-0">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: 100 }}
+          transition={{ duration: 0.8 }}
+          className="mt-10 md:mt-0"
+        >
           <Image
             src="/hero-image.svg"
             width={593}
             height={494}
             alt="Ilustração da seção hero"
           />
-        </div>
+        </motion.div>
       </div>
     </Container>
   )
