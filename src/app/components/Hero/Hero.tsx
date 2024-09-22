@@ -34,7 +34,7 @@ function MyComponent() {
 export function Hero() {
   return (
     <Container>
-      <div className="py-14 md:py-20 flex flex-col md:flex-row items-center justify-between">
+      <div className="py-14 overflow-hidden md:py-20 flex flex-col md:flex-row items-center justify-between">
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
