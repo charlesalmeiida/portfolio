@@ -1,4 +1,4 @@
-import Link from "next/link"
+import { Link, usePathname } from "@/i18n/routing"
 import { ReactNode } from "react"
 import { twMerge } from "tailwind-merge"
 
@@ -9,9 +9,12 @@ interface LinkLangProps {
 }
 
 export function LinkLang({ children, link, className }: LinkLangProps) {
+  const pathname = usePathname()
+
   return (
     <Link
-      href={link}
+      href={pathname}
+      locale={link}
       className={twMerge(
         "flex items-center gap-2 text-sm text-gray03",
         className
