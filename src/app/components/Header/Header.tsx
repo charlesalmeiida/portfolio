@@ -27,7 +27,7 @@ export function Header() {
           {menuOpen && <MenuMobile />}
           <div className="sm:flex gap-8 md:gap-12 hidden">
             <ItemMenu className="text-gray03 hover:text-gray02" link="#cases">
-              Cases
+              Projetos
             </ItemMenu>
             <ItemMenu
               className="text-gray03 hover:text-gray02"
