@@ -9,11 +9,11 @@ export default function Home() {
   return (
     <>
       <Header />
-      {/* <Hero />
+      <Hero />
       <DivisorArea />
       <Cases />
       <About />
-      <Footer /> */}
+      <Footer />
     </>
   )
 }

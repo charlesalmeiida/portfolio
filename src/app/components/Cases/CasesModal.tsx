@@ -1,7 +1,6 @@
 import Image from "next/image"
 import { Container } from "../GridContainer"
 import Link from "next/link"
-import { motion } from "framer-motion"
 
 interface CasesModalProps {
   closeModal: () => void
@@ -35,12 +34,7 @@ export function CasesModal({
         onClick={handleOverlayClick}
       ></div>
       <div className="hidden md:block">
-        <motion.div
-          initial={{ zoom: 0.6 }}
-          whileInView={{ zoom: 1 }}
-          transition={{ duration: 0.3 }}
-          exit={{ opacity: 0 }}
-        >
+        <div>
           <div className="fixed mx-2 pt-10 drop-shadow-2xl inset-0 h-fit md:mx-auto top-40 z-20 bg-white border-[1px] rounded-md border-[#DCDCDC] w-fit">
             <button
               onClick={closeModal}
@@ -77,7 +71,7 @@ export function CasesModal({
               </Link>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
       <div className="md:hidden">
         <div className="fixed mx-2 pt-10 drop-shadow-2xl inset-0 h-fit md:mx-auto top-40 z-20 bg-white border-[1px] rounded-md border-[#DCDCDC] w-fit">

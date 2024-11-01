@@ -6,17 +6,24 @@ interface LinkLangProps {
   children: ReactNode
   link: string
   className?: string
+  handleLangChange?: () => void
 }
 
-export function LinkLang({ children, link, className }: LinkLangProps) {
+export function LinkLang({
+  children,
+  link,
+  className,
+  handleLangChange,
+}: LinkLangProps) {
   const pathname = usePathname()
 
   return (
     <Link
+      onClick={handleLangChange}
       href={pathname}
       locale={link}
       className={twMerge(
-        "flex items-center gap-2 text-sm text-gray03",
+        "flex items-center gap-2 text-sm text-gray02 hover:text-gray03",
         className
       )}
     >
