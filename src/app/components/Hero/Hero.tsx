@@ -30,7 +30,7 @@ function MyComponent() {
         typed.destroy()
       }
     }
-  }, [])
+  }, [locale])
 
   return <span ref={el} />
 }

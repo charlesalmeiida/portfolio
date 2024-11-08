@@ -35,7 +35,7 @@ export function CasesModal({
       ></div>
       <div className="hidden md:block">
         <div>
-          <div className="fixed mx-2 pt-10 drop-shadow-2xl inset-0 h-fit md:mx-auto top-40 z-20 bg-white border-[1px] rounded-md border-[#DCDCDC] w-fit">
+          <div className="fixed mx-2 pt-10 drop-shadow-2xl inset-0 h-fit md:mx-auto top-20 z-20 bg-white border-[1px] rounded-md border-[#DCDCDC] w-fit">
             <button
               onClick={closeModal}
               className="absolute top-4 right-4 font-inter text-sm bg-blue text-gray01 px-2 rounded-full"

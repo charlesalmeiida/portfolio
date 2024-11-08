@@ -5,6 +5,7 @@ import { Container } from "../GridContainer"
 import { ProjectCase } from "./ProjectCase"
 import { CasesModal } from "./CasesModal"
 import { motion } from "framer-motion"
+import projectData from "@/app/data/projectData.json"
 
 interface Project {
   imageSrc: string
@@ -55,74 +56,7 @@ export function Cases() {
     setSelectedProject(null)
   }
 
-  const projects: Project[] = [
-    {
-      imageSrc: "/project-image-portfolio.png",
-      imageAlt: "Imagem do projeto Portfolio",
-      projectName: "Portfolio",
-      projectDescription:
-        "Portfólio pessoal utilizando Next.js para garantir alto desempenho e otimização SEO, Para a estilização, utilizei Tailwind CSS, que me permitiu criar uma interface responsiva e atraente.",
-      tech1: "next",
-      techName1: "Next.js",
-      tech2: "tailwind",
-      techName2: "Tailwind",
-      tech3: "ts",
-      techName3: "TypeScript",
-      liveLink: "https://portfolio-opal-three-21.vercel.app",
-      repoLink: "https://github.com/charlesalmeiida/portfolio",
-      projectImage: "portfolio",
-    },
-    {
-      imageSrc: "/image-project-consultacep.png",
-      imageAlt: "Imagem do projeto ConsultaCEP",
-      projectName: "ConsultaCEP",
-      projectDescription:
-        "Desenvolvimento de projeto prático para aprimorar as habilidades em desenvolvimento e em especial a capacidade de fazer consultas a API's externas",
-      tech1: "react",
-      techName1: "React",
-      tech2: "tailwind",
-      techName2: "Tailwind",
-      tech3: "js",
-      techName3: "JavaScript",
-      liveLink: "https://consultacep-charlesalmeiida.netlify.app",
-      repoLink: "https://github.com/charlesalmeiida/consultaCEP",
-      projectImage: "consultacep",
-    },
-    {
-      imageSrc: "/image-project-quiz.png",
-      imageAlt: "Imagem do projeto Quiz",
-      projectName: "Quiz App",
-      projectDescription:
-        "Quiz desenvolvido durante o curso Dev Sem Limites, com o objetivo de praticar as tecnologias e consolidar o entendimento de SPAs, bem como o conceito de componentização.",
-      tech1: "react",
-      techName1: "React",
-      tech2: "vite",
-      techName2: "Vite",
-      tech3: "ts",
-      techName3: "TypeScript",
-      liveLink: "https://quizapp-dsl.netlify.app",
-      repoLink: "https://github.com/charlesalmeiida/quiz-app",
-      projectImage: "quiz app",
-    },
-    {
-      imageSrc: "/image-project-devbooks.png",
-      imageAlt: "Imagem do projeto DevBooks",
-      projectName: "Devbooks",
-      projectDescription:
-        "Projeto Devbooks em React, realizado durante o curso Dev Sem Limites. Com consulta a API de livros do Google.",
-      tech1: "react",
-      techName1: "React",
-      tech2: "ts",
-      techName2: "TypeScript",
-      tech3: "styled",
-      techName3: "Styled-components",
-      liveLink: "https://devbooks-dsl.netlify.app",
-      repoLink: "https://github.com/charlesalmeiida/devbooks",
-      projectImage: "devbooks",
-    },
-  ]
-
-  const visibleProjects = showAll ? projects : projects.slice(0, 3)
+  const visibleProjects = showAll ? projectData : projectData.slice(0, 3)
 
   return (
     <Container>

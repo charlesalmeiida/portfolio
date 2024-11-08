@@ -62,7 +62,7 @@ export function ProjectCase({
         <h3 className="font-poppins text-2xl font-semibold text-gray03">
           {projectName}
         </h3>
-        <p className="font-inter text-sm mt-3 text-gray03 opacity-80 max-w-[333px]">
+        <p className="font-inter text-sm mt-3 line-clamp-3 text-gray03 opacity-80 max-w-[333px]">
           {projectDescription}
         </p>
         <span className="font-inter text-base font-medium text-blue03 underline block mt-3">
