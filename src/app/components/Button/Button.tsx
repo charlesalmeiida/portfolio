@@ -14,7 +14,7 @@ export function Button({ children, className, link }: ButtonProps) {
       href={link}
       target="_blank"
       className={twMerge(
-        "rounded-[4px] font-inter py-2 px-4 flex items-center gap-4 w-full w-fit transition-all hover:scale-110",
+        "rounded-[4px] font-inter py-2 px-4 flex items-center gap-4 w-fit transition-all hover:scale-110",
         className
       )}
     >

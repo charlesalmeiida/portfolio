@@ -1,0 +1,46 @@
+[
+  {
+    "src": "/logo-html.svg",
+    "text": "HTML5"
+  },
+  {
+    "src": "/logo-css.svg",
+    "text": "CSS3"
+  },
+  {
+    "src": "/logo-js.svg",
+    "text": "JavaScript"
+  },
+  {
+    "src": "/logo-ts.svg",
+    "text": "TypeScript"
+  },
+  {
+    "src": "/logo-scss.svg",
+    "text": "Sass"
+  },
+  {
+    "src": "/logo-react.svg",
+    "text": "ReactJS"
+  },
+  {
+    "src": "/logo-next.svg",
+    "text": "NextJS"
+  },
+  {
+    "src": "/logo-tailwind.svg",
+    "text": "Tailwind"
+  },
+  {
+    "src": "/logo-vite.svg",
+    "text": "Vite"
+  },
+  {
+    "src": "/logo-styled.svg",
+    "text": "Styled"
+  },
+  {
+    "src": "/logo-bootstrap.svg",
+    "text": "Bootstrap"
+  }
+]
