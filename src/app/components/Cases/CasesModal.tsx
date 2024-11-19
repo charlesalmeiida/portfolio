@@ -43,7 +43,7 @@ export function CasesModal({
               X
             </button>
             <Image
-              src={`/image-${projectImage}-lg.png`}
+              src={projectImage}
               width={744}
               height={286}
               alt={`Imagem do projeto ${projectName}`}
@@ -82,7 +82,7 @@ export function CasesModal({
             X
           </button>
           <Image
-            src={`/image-${projectImage}-lg.png`}
+            src={projectImage}
             width={744}
             height={286}
             alt={`Imagem do projeto ${projectName}`}

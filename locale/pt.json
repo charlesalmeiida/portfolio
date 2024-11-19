@@ -8,5 +8,11 @@
     "hello": "Olá, eu sou",
     "developer": "Desenvolvedor",
     "description": "Com formação em Sistemas de Informação e conhecimentos em UX e UI Design. Conhecimentos esses que combinados me permitem criar experiências digitais que são tanto esteticamente agradáveis quanto fáceis de usar."
+  },
+  "Cases": {
+    "tag": "Projetos",
+    "title": "Meu projetos",
+    "showMore": "Mostrar mais",
+    "showLess": "Mostrar menos"
   }
 }

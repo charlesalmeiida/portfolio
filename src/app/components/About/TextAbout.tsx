@@ -22,7 +22,7 @@ export function TextAbout() {
         problemas.
       </p>
       <Button
-        link="/Currículo - Charles Almeida.pdf"
+        link="\Currículo Charles Almeida - Desenvolvedor Front-end.pdf"
         className="bg-transparent mt-8 text-gray03 border-[1px] border-blue02"
       >
         Baixar CV

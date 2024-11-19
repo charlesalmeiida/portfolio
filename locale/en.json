@@ -8,5 +8,11 @@
     "hello": "Hello, I'm",
     "developer": "Developer",
     "description": "With a background in Information Systems and expertise in UX and UI Design, I am equipped to create digital experiences that are both aesthetically pleasing and user-friendly."
+  },
+  "Cases": {
+    "tag": "Cases",
+    "title": "My projects",
+    "showMore": "Show more",
+    "showLess": "Show less"
   }
 }

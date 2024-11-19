@@ -6,19 +6,14 @@ import { ProjectCase } from "./ProjectCase"
 import { CasesModal } from "./CasesModal"
 import { motion } from "framer-motion"
 import projectData from "@/app/data/projectData.json"
+import { useTranslations } from "next-intl"
 
 interface Project {
-  imageSrc: string
-  imageAlt: string
+  image: string
   projectName: string
   projectImage: string
   projectDescription: string
-  tech1: string
-  techName1: string
-  tech2: string
-  techName2: string
-  tech3: string
-  techName3: string
+  techs: string[]
   liveLink: string
   repoLink: string
 }
@@ -27,6 +22,7 @@ export function Cases() {
   const [showAll, setShowAll] = useState(false)
   const [isModalOpen, setModalOpen] = useState(false)
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
+  const t = useTranslations("Cases")
 
   function disableScroll() {
     document.body.style.overflow = "hidden"
@@ -63,10 +59,10 @@ export function Cases() {
       <div className="py-14 md:py-28" id="cases">
         <div className="mx-auto w-fit text-center space-y-2">
           <span className="font-poppins text-base text-gray03 tracking-widest">
-            PROJETOS
+            {t("tag")}
           </span>
           <h2 className="font-poppins text-[40px] font-semibold text-gray03">
-            Meus cases
+            {t("title")}
           </h2>
         </div>
         <motion.div
@@ -79,16 +75,10 @@ export function Cases() {
           {visibleProjects.map((project, index) => (
             <button key={index} onClick={() => openModal(project)}>
               <ProjectCase
-                imageSrc={project.imageSrc}
-                imageAlt={project.imageAlt}
+                image={project.image}
                 projectName={project.projectName}
                 projectDescription={project.projectDescription}
-                tech1={project.tech1}
-                techName1={project.techName1}
-                tech2={project.tech2}
-                techName2={project.techName2}
-                tech3={project.tech3}
-                techName3={project.techName3}
+                techs={project.techs}
               />
             </button>
           ))}
