@@ -4,6 +4,7 @@
     "imageAlt": "Imagem do projeto Hotel Daifa",
     "projectName": "Hotel Daifa",
     "projectDescription": "Site do Hotel Daifa desenvolvido em Next.js, TypeScript e TailwindCSS, garantindo uma solução escalável, eficiente e responsiva. Além disso, integrei o Builder.io como headless CMS para gerenciar o conteúdo do blog. Foi utilizado também bibliotecas como o React Day Picker para fazer a seleção de datas, o nodemailer para envio de e-mails e o Swiper para carrossel de imagens.",
+    "projectDescriptionEN": "Hotel Daifa website developed using Next.js, TypeScript, and TailwindCSS, ensuring a scalable, efficient, and responsive solution. Additionally, Builder.io was integrated as a headless CMS to manage blog content. Libraries such as React Day Picker were used for date selection, Nodemailer for email sending, and Swiper for the image carousel.",
     "techs": ["next", "tailwind", "ts"],
     "logoTechs": [
       "/svg/logo-next.svg",
@@ -18,6 +19,7 @@
     "image": "/project-image-portfolio.png",
     "projectName": "Portfolio",
     "projectDescription": "Portfólio pessoal utilizando Next.js com TypeScript para garantir alto desempenho e otimização SEO. Para a estilização, utilizei Tailwind CSS, que me permitiu criar uma interface responsiva e atraente. Utilizei também a biblioteca next-intl para implementar a internacionalização.",
+    "projectDescriptionEN": "Personal portfolio developed with Next.js and TypeScript to ensure high performance and SEO optimization. For styling, I used Tailwind CSS, which allowed me to create a responsive and visually appealing interface. Additionally, I implemented internationalization using the next-intl library.",
     "techs": ["next", "tailwind", "ts"],
     "logoTechs": [
       "/svg/logo-next.svg",
@@ -31,7 +33,8 @@
   {
     "image": "/image-project-quiz.png",
     "projectName": "Quiz App",
-    "projectDescription": "Quiz desenvolvido durante o curso Dev Sem Limites, com o objetivo de praticar as tecnologias e consolidar o entendimento de SPAs, bem como o conceito de componentização.",
+    "projectDescription": "Quiz desenvolvido durante o curso Dev Sem Limites, utilizando React, TypeScript e CSS Modules com o objetivo de praticar as tecnologias e consolidar o entendimento de SPAs, bem como o conceito de componentização e gerenciamento de estados com React.",
+    "projectDescriptionEN": "Quiz developed during the Dev Sem Limites course, using React, TypeScript, and CSS Modules with the goal of practicing these technologies and solidifying the understanding of SPAs, as well as the concepts of componentization and state management in React.",
     "techs": ["react", "vite", "ts"],
     "logoTechs": [
       "/svg/logo-react.svg",
@@ -45,7 +48,8 @@
   {
     "image": "/image-project-devbooks.png",
     "projectName": "Devbooks",
-    "projectDescription": "Projeto Devbooks em React, realizado durante o curso Dev Sem Limites. Com consulta a API de livros do Google.",
+    "projectDescription": "Projeto Devbooks desenvolvido com React, TypeScript e Styled-components. O projeto foi realizado durante o curso Dev Sem Limites, com o objetivo de aprimorar o conhecimento de consultas à APIs, utlizando a API de livros do Google. Além da utilização da biblioteca Styled-components que nos permite criar componentes estilizados, facilidanto o processo de desenvolvimento.",
+    "projectDescriptionEN": "Devbooks project developed with React, TypeScript, and Styled-components. This project was completed during the Dev Sem Limites course to enhance knowledge of API requests using the Google Books API. Additionally, the Styled-components library was used, enabling the creation of styled components and streamlining the development process.",
     "techs": ["react", "ts", "styled"],
     "logoTechs": [
       "/svg/logo-react.svg",

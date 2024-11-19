@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { Container } from "../GridContainer"
 import Link from "next/link"
+import { useTranslations } from "next-intl"
 
 interface CasesModalProps {
   closeModal: () => void
@@ -26,6 +27,8 @@ export function CasesModal({
       closeModal()
     }
   }
+
+  const t = useTranslations("Cases")
 
   return (
     <Container>
@@ -60,14 +63,14 @@ export function CasesModal({
                 href={liveLink}
                 target="_blank"
               >
-                Projeto online
+                {t("linkProject")}
               </Link>
               <Link
                 className="font-inter text-base font-medium underline opacity-80 text-gray03"
                 href={repoLink}
                 target="_blank"
               >
-                Link para o repositório
+                {t("linkRepo")}
               </Link>
             </div>
           </div>

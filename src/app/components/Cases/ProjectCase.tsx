@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { TagTech } from "./TagTechProject"
+import { useTranslations } from "next-intl"
 
 interface ProjectCaseProps {
   projectName: string
@@ -14,6 +15,8 @@ export function ProjectCase({
   image,
   techs,
 }: ProjectCaseProps) {
+  const t = useTranslations("Cases")
+
   return (
     <div className="w-fit h-[485px] text-left border-[1px] rounded-md border-[#DCDCDC] cursor-pointer transition-all hover:scale-105">
       <Image
@@ -61,7 +64,7 @@ export function ProjectCase({
           {projectDescription}
         </p>
         <span className="font-inter text-base font-medium text-blue03 underline block mt-3">
-          Saiba mais
+          {t("seeMore")}
         </span>
       </div>
     </div>

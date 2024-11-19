@@ -6,13 +6,14 @@ import { ProjectCase } from "./ProjectCase"
 import { CasesModal } from "./CasesModal"
 import { motion } from "framer-motion"
 import projectData from "@/app/data/projectData.json"
-import { useTranslations } from "next-intl"
+import { useTranslations, useLocale } from "next-intl"
 
 interface Project {
   image: string
   projectName: string
   projectImage: string
   projectDescription: string
+  projectDescriptionEN: string
   techs: string[]
   liveLink: string
   repoLink: string
@@ -23,6 +24,7 @@ export function Cases() {
   const [isModalOpen, setModalOpen] = useState(false)
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
   const t = useTranslations("Cases")
+  const locale = useLocale()
 
   function disableScroll() {
     document.body.style.overflow = "hidden"
@@ -77,7 +79,11 @@ export function Cases() {
               <ProjectCase
                 image={project.image}
                 projectName={project.projectName}
-                projectDescription={project.projectDescription}
+                projectDescription={
+                  locale === "en"
+                    ? project.projectDescriptionEN
+                    : project.projectDescription
+                }
                 techs={project.techs}
               />
             </button>
@@ -88,7 +94,11 @@ export function Cases() {
               liveLink={selectedProject.liveLink}
               repoLink={selectedProject.repoLink}
               projectName={selectedProject.projectName}
-              projectDescription={selectedProject.projectDescription}
+              projectDescription={
+                locale === "en"
+                  ? selectedProject.projectDescriptionEN
+                  : selectedProject.projectDescription
+              }
               projectImage={selectedProject.projectImage}
             />
           )}
@@ -97,7 +107,7 @@ export function Cases() {
           onClick={() => setShowAll(!showAll)}
           className="rounded-[4px] font-inter py-2 px-4 flex items-center gap-4 w-fit transition-all hover:scale-110 bg-transparent mx-auto mt-14 md:mt-20 text-gray03 border-[1px] border-blue02"
         >
-          {showAll ? "Mostrar menos" : "Mostrar mais"}
+          {showAll ? t("showLess") : t("showMore")}
         </button>
       </div>
     </Container>

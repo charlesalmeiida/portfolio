@@ -8,7 +8,7 @@ const poppins_font = Poppins({
 
 const inter_font = Inter({
   subsets: ["latin"],
-  weight: ["400", "500"],
+  weight: ["400", "500", "600"],
   variable: "--font-inter",
 })
 
